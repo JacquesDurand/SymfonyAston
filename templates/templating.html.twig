@@ -1,0 +1,20 @@
+{%extends 'base.html.twig'%}
+
+{%block title%}
+{{parent()}}
+Nouveau Titre
+{%endblock%}
+
+{%block stylesheets%}
+{{parent()}}
+<link rel="stylesheet" href="{{ asset('css/templating.css')}}">
+{%endblock%}
+
+{%block body%}
+<div class="container">
+    <div class="row bg-primary">
+        <p>Salut c'est {{prenom}} {{nom}}</p>
+    </div>
+</div>
+{%endblock%}
+
