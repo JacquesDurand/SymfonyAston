@@ -1,0 +1,19 @@
+.results {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    display: inline-block;
+    text-align: left;
+    background-color: #ccc;
+    padding-right: 20px;
+    color: royalblue;
+}
+.card:hover {
+    background-color: rgb(230, 227, 227);
+}
+
+li {
+    margin :10px
+}

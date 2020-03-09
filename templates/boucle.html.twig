@@ -6,10 +6,44 @@ Boucle
 
 {%block stylesheets%}
 {{parent()}}
+<link rel="stylesheet" href="{{ asset('css/boucle.css')}}">
 {%endblock%}
 
 {%block body%}
 <div class="container">
-    <h1>Ici on apprend les boucles</h1>
+    <h1 class="text-center">Ici on apprend les boucles</h1>
+    <ul>
+        {% for user in users %}
+        <li>{{user}}</li>
+        {% endfor %}
+    </ul>
+    <hr>
+    <div class="results">
+    <ul>
+        {% for user in usersDetail %}
+        <li class="card">
+            <ul>
+                <li style="list-style: none;">Nom : {{user.nom}}</li>
+                <li style="list-style: none;">Age : {{user.age}}</li>
+                <li style="list-style: none;">Sexe : {{user.sexe}}</li>
+            </ul>
+            <br>
+        </li>
+        {% endfor %}
+    </ul>
+    </div>
+    <hr>
+    <div class="results">
+        <ul>
+            {% for heroe in heroes %}
+                <li style="list-style: none;">
+                   Nom : {{heroe.nom}}
+                </li>
+                <li style="list-style: none;">
+                   Ability : {{heroe.ability}}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
 </div>
 {%endblock%}
